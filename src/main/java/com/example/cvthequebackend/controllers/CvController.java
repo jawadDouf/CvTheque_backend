@@ -28,7 +28,6 @@ public class CvController {
 
     @GetMapping("/all")
     public ResponseEntity<List<CvDto>> getAllCv(){
-
         return ResponseEntity.ok(cvService.getAllCv());
     }
 }

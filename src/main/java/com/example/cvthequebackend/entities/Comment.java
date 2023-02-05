@@ -10,7 +10,9 @@ import lombok.Data;
 @Entity
 public class Comment {
 
-    @Id @GeneratedValue private Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
     private String content;
     private String date;
     private String time;

@@ -13,5 +13,4 @@ public class ApprenantCreationDTO {
     private String image;
     private String speciality;
     private String password;
-
 }
