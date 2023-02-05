@@ -10,7 +10,8 @@ import java.util.List;
 @Entity
 public class Apprenant{
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private Long id;
     private String firstName;
     private String lastName;
