@@ -10,7 +10,8 @@ import com.example.cvthequebackend.services.ApprenantService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/apprenant")
+@RequestMapping("/api/apprenant")
+@CrossOrigin(origins="http://localhost:4200")
 public class ApprenantController {
 
     final private ApprenantService apprenantService;
@@ -23,7 +24,6 @@ public class ApprenantController {
     public ResponseEntity<List<ApprenantDto>> getAllApprenant() {
         return new ResponseEntity<>(apprenantService.getAllApprenant(), HttpStatus.OK);
     }
-
     @PostMapping("/add")
     public ResponseEntity<ApprenantDto> addApprenant(@RequestBody ApprenantCreationDTO apprenantCreationDTO) {
         return new ResponseEntity<>(apprenantService.addApprenant(apprenantCreationDTO), HttpStatus.CREATED);
