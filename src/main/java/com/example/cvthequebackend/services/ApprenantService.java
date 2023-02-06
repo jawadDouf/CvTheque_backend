@@ -27,10 +27,9 @@ public class ApprenantService {
 
 
     public List<ApprenantDto> getAllApprenant() {
-        return apprenantRepository.findAll()
-                .stream()
-                .map(apprenantMapper)
-                .toList();
+        List<Apprenant> apprenants = apprenantRepository.findAll();
+        List<ApprenantDto> apprenantDtos = apprenantMapper.apply(apprenants);
+        return apprenantDtos;
     }
 
     public ApprenantDto addApprenant(ApprenantCreationDTO apprenantCreationDTO) {

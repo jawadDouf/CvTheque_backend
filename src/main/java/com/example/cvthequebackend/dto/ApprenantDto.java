@@ -18,4 +18,6 @@ public class ApprenantDto {
     private String image;
     private String speciality;
 
+
+
 }
